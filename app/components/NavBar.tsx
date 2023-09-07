@@ -2,6 +2,8 @@ import React from "react";
 import { Menu,Transition } from "@headlessui/react"
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import {FaGithub} from 'react-icons/fa';
+import {BsLinkedin} from 'react-icons/bs';
 
 
 const navigation = [
@@ -16,8 +18,8 @@ function classNames(...classes: string[]) {
 }
 
 const socials = [
-    {name: "GitHub", href: "https://github.com/sheehanrobb", icon: "github.png"},
-    {name: "LinkedIn", href: "https://www.linkedin.com/in/sheehanrobb/", icon: "https://simpleicons.org/icons/linkedin.svg"},
+    {name: "GitHub", href: "https://github.com/sheehanrobb", icon: <FaGithub/>},
+    {name: "LinkedIn", href: "https://www.linkedin.com/in/sheehanrobb/", icon: <BsLinkedin/>},
 ]
 
 export default function NavBar() {
