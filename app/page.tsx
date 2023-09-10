@@ -1,6 +1,7 @@
 'use client'
 
 import NavBar from "./components/NavBar"
+import ProjectsDiv from "./components/ProjectsDiv"
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <h1 className="text-9xl flex-row">Sheehan</h1>
         <h2 className="text-9xl text-violet-200 flex-row">Robb</h2>
       </div>
-      
+      <ProjectsDiv />
 
       
     </main>

@@ -35,7 +35,7 @@ export default function NavBar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-violet-500 text-white' : 'text-grey-300 hover:bg-indigo-500 hover:text-white',
+                          item.current ? 'bg-violet-500 text-white' : 'text-grey-300 hover:bg-indigo-300 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -48,7 +48,7 @@ export default function NavBar() {
                 </div>
               </div>
         </div>
-        <div className="flex flex-1 items-right">
+        <div className="fixed top-16 flex flex-1 items-right">
             <div>
                 {socials.map((item) => (
                     <a
