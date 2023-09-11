@@ -19,53 +19,52 @@ function classNames(...classes: string[]) {
 
 const socials = [
     {name: "GitHub", href: "https://github.com/sheehanrobb", icon: <FaGithub/>},
-    {name: "LinkedIn", href: "https://www.linkedin.com/in/sheehanrobb/", icon: <BsLinkedin/>},
+    {name: "LinkedIn", href: "https://www.linkedin.com/in/sheehan-robb-a9632098/", icon: <BsLinkedin/>},
 ]
 
 export default function NavBar() {
   return (
-    <div className="fixed top-16 w-56 text-right">
-      <Menu as="div" className="relative inline-block text-left">
-        <div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-violet-500 text-white' : 'text-grey-300 hover:bg-indigo-300 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                        
-                      </a>
-                    ))}
-                  </div>
+    
+      <div className="flex fixed top-16 w-screen">
+        <Menu as="div" className="relative inline-block">
+          <div>
+            <div className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
+              <div className="hidden sm:ml-6 sm:block">
+                <div className="flex space-x-4">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className={classNames(
+                        item.current
+                          ? "bg-violet-500 text-white"
+                          : "text-grey-300 hover:bg-indigo-300 hover:text-white",
+                        "rounded-md px-3 py-2 text-sm font-medium"
+                      )}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
                 </div>
               </div>
-        </div>
-        <div className="fixed top-16 flex flex-1 items-right">
-            <div>
-                {socials.map((item) => (
-                    <a
-                        key={item.name}
-                        href={item.href}
-                        >
-                            {item.icon}
-                        </a>
-
-                ))}
             </div>
-
+          </div>
+        </Menu>
+        <div className="flex flex-1 justify-end px-6">
+          <div>
+            {socials.map((item) => (
+              <a key={item.name} href={item.href}>
+                <div className="bg-cyan-400 p-5 rounded text-xl">
+                  {item.icon}
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
-        
-      </Menu>
-    </div>
-  )
+      </div>
+    
+  );
 }
 
 
