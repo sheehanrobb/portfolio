@@ -51,11 +51,11 @@ export default function NavBar() {
             </div>
           </div>
         </Menu>
-        <div className="flex flex-1 justify-end px-6">
+        <div className="flex flex-1 justify-end ">
           <div>
             {socials.map((item) => (
               <a key={item.name} href={item.href}>
-                <div className="bg-cyan-400 p-5 rounded text-xl">
+                <div className="flex bg-cyan-400 p-1 lg:p-5 rounded text-xl">
                   {item.icon}
                 </div>
               </a>
