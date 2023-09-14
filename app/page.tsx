@@ -3,6 +3,7 @@
 import Name from "./components/Name"
 import NavBar from "./components/NavBar"
 import AiScribeProject from "./components/AiScribeProject"
+import TechStack from "./components/TechStack"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <NavBar />
       <Name />
       <AiScribeProject />
+      <TechStack />
 
       
     </main>
