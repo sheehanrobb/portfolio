@@ -6,16 +6,28 @@
 
 export default function TechStack(){
 
-    const tech = [{name: 'JavaScript'},{name: 'TypeScript'},{name:'React'},
-    {name: 'Next JS'},{name: 'Mongo DB'}, {name:'MySQL'}, {name: 'Prisma'}, 
-    {name: 'Node JS'},{name: 'HTML'}, {name:'CSS'}, {name: 'Tailwind'}, {name: 'Git'},
-    {name: 'Github'}, {name: 'Figma'}]
+    const tech = [{id: 1, name: 'JavaScript'},
+    {id: 2, name: 'TypeScript'},
+    {id: 3, name:'React'},
+    {id: 4, name: 'Next JS'},
+    {id: 5, name: 'Mongo DB'},
+    {id: 6, name:'MySQL'}, 
+    {id: 7, name: 'Prisma'}, 
+    {id:8, name: 'Node JS'}, 
+    {id: 9, name: 'HTML'}, 
+    {id: 10, name:'CSS'}, 
+    {id: 11, name: 'Tailwind'}, 
+    {id: 12, name: 'Git'},
+    {id: 13, name: 'Github'}, 
+    {id: 14, name: 'Figma'}]
 
     return (
-        <div>
+        <div className="flex">
             {tech.map((item) => (
-                <div>{item.name}</div>
+                <div className="flex bg-yellow-600" key={item.id}>{item.name}</div>
+                
             ))}
+            
             
         </div>
 
